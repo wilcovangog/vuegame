@@ -1,0 +1,13 @@
+@import "styles/variables";
+
+// npm depencies
+@import "~bootstrap/scss/bootstrap";
+@import "~font-awesome/scss/font-awesome";
+
+// Project specific
+@import "styles/global";
+@import "styles/animate";
+
+// Pages
+@import "components/Traffic/traffic";
+@import "components/Puzzle/puzzle";

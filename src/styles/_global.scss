@@ -1,0 +1,105 @@
+::selection {
+  background: $brand-primary;
+  color: #fff;
+  text-shadow: 0px 0px 0px;
+}
+
+::-moz-selection {
+  background: $brand-primary;
+  color: #fff;
+  text-shadow: 0px 0px 0px;
+}
+
+::-webkit-selection {
+  background: $brand-primary;
+  color: #fff;
+  text-shadow: 0px 0px 0px;
+}
+html, body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #DDD;
+}
+#app {
+  display: grid;
+  background-color: #DDD;
+  overflow: hidden;
+}
+#logo {
+  grid-area: logo;
+}
+#footer {
+  grid-area: footer;
+  margin: 5px 15px;
+}
+#info {
+  grid-area: info;
+}
+#header {
+  grid-area: header;
+  overflow: hidden;
+  align-self: center;
+}
+.button {
+  padding: 10px;
+  margin: 10px;
+  color: #000;
+}
+.button:hover {
+  color: #ddd;
+}
+#content {
+  padding: 10px;
+  grid-area: content;
+}
+.router-link-active {
+  text-decoration: none;
+  color: red;
+}
+
+@media screen and (max-width: 720px) {
+  #app {
+    grid-template-columns: 100vw;
+    grid-template-rows: auto;
+    grid-template-areas: "logo" "header" "content" "info" "footer";
+    grid-column-gap: 0vw;
+    grid-row-gap: 1vh;
+  }
+  #logo img {
+    width: 100%;
+    margin: 20px auto;
+    max-height: 150px;
+    max-width: 150px;
+    display: block;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 920px){
+  #app {
+    grid-template-columns: 10vw 69vw 20vw;
+    grid-template-rows: 10vh 83vh 5vh;
+    grid-template-areas: "logo header header " "content content content" "footer footer footer";
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vh;
+  }
+  #logo img {
+    height: 80%;
+    margin: 10%;
+  }
+}
+@media screen and (min-width: 920px) {
+  #app {
+    grid-template-columns: 10vw 69vw 20vw;
+    grid-template-rows: 10vh 83vh 5vh;
+    grid-template-areas: "logo header header " "content content info" "footer footer footer";
+    grid-column-gap: 1vw;
+    grid-row-gap: 1vh;
+  }
+  #logo img {
+    height: 80%;
+    margin: 10%;
+  }
+}

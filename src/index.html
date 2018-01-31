@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue Game</title>
+</head>
+<body>
+<div id="app">
+  <div id="logo">
+    <img src="./assets/images/logo.png">
+  </div>
+  <div id="header">
+    <span class="button">
+      <router-link to="/" exact>Home</router-link>
+    </span>
+    <span class="button">
+      <router-link to="/traffic">Traffic</router-link>
+    </span>
+    <span class="button">
+      <router-link to="/puzzle">Puzzle</router-link>
+    </span>
+  </div>
+  <router-view id="content"></router-view>
+  <div id="info">
+    Game scores:
+    //TODO
+  </div>
+  <div id="footer">Made by Wilco van Gog</div>
+</div>
+
+</body>
+</html>

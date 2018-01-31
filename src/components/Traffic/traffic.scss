@@ -1,0 +1,32 @@
+.road, .crossing {
+  width: 25px;
+  height: 25px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 10px;
+}
+.road {
+  background-color: #ccc;
+}
+.crossing {
+  background-color: #bbb;
+  cursor: pointer;
+}
+.topLight {
+  border-top: 1px solid #dd1d21;
+}
+.bottomLight {
+  border-bottom: 1px solid #dd1d21;
+}
+.leftLight {
+  border-left: 1px solid #dd1d21;
+}
+.rightLight {
+  border-right: 1px solid #dd1d21;
+}
+.lightOn {
+  border-color: chartreuse;
+}
+button {
+  border: 1px solid #000;
+}

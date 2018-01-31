@@ -1,0 +1,46 @@
+<div id="Puzzle">
+  <h1>{{puzzle.title}}</h1>
+  <div id="gameboard">
+    <p>Board:</p>
+    <div class="row" v-for="(row, index) in puzzle.board.rows">
+      <span
+          v-for="(letter, column) in row"
+          class="letter"
+          v-on:click="selectLetter(index+1, column+1)"
+          v-bind:class="{
+            selected: letterState(index+1, column+1, 'selected'),
+            solved: letterState(index+1, column+1, 'solved'),
+            solution: puzzle.solved && !letterState(index+1, column+1, 'solved'),
+          }"
+      >
+        {{letter}}
+      </span>
+
+    </div>
+  </div>
+  <div id="scoreboard">
+    <p>Words:</p>
+    <span class="word"
+          v-for="(word, index) in puzzle.words"
+          v-bind:class="{
+            solved: word.found,
+          }"
+    >
+      {{word.word}}
+    </span>
+  </div>
+  <div id="solution" v-if="puzzle.solved">
+    <span v-for="(row, index) in puzzle.board.rows">
+      <span
+          v-for="(letter, column) in row"
+          v-if="!letterState(index+1, column+1, 'solved')"
+      >
+        {{letter}}
+      </span>
+    </span>
+  </div>
+  <p class="info">
+    Click on the letters for a word. Once you succesfully selected a word from the right it will be crossed off.
+    Once you found all words the remaining letters will form a sentence.
+  </p>
+</div>

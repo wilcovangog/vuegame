@@ -1,2 +1,6 @@
-# vuegame
-First try out with Vue
+# Vuegame
+My first try out with Vue and VueX
+
+# To start
+-yarn install
+-yarn start
